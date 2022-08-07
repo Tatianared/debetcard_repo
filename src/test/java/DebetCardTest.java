@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DebetCardTest {
 
     WebDriver driver;
-    
+
     @BeforeAll
     static void setupAll() {
         WebDriverManager.chromedriver().setup();
