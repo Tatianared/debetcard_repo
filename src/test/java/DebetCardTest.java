@@ -13,16 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DebetCardTest {
 
     WebDriver driver;
-
-    @BeforeEach
-    void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-    }
-
+    
     @BeforeAll
     static void setupAll() {
         WebDriverManager.chromedriver().setup();
@@ -30,6 +21,11 @@ class DebetCardTest {
 
     @BeforeEach
     void setup() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
         driver = new ChromeDriver();
     }
 
